@@ -3,7 +3,7 @@ import os
 import pickle
 from ml_model import row_pred
 
-app = Flask('app')
+app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
 
