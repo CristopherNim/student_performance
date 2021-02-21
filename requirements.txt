@@ -1,6 +1,6 @@
 Flask ==1.1.2
 pandas ==1.0.3
-numpy==1.20.1
+numpy== 20.1
 scikit_learn==0.23.1
 gunicorn== 19.9.0
 dj-database-url == 0.5.0
