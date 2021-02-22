@@ -37,7 +37,7 @@ df_OneHotEncoder = pd.concat([df, hot_df], axis=1).drop(columns=categorical_cols
 X = df_OneHotEncoder.drop('math_score', axis=1)
 y = df_OneHotEncoder['math_score']
 
-cv = RepeatedKFold(n_splits=10, n_repeats=3, random_state=1)
+cv = RepeatedKFold(n_splits=5, n_repeats=2, random_state=1)
 model = Ridge(alpha=.99).fit(X, y)
 model_scores = cross_val_score(estimator=model, X=X, y=y, cv=cv, n_jobs=-1)
 
